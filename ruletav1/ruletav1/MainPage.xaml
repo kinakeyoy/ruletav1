@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ruletav1"
+             x:Class="ruletav1.MainPage"
+             Title="Ruleta"
+             BackgroundColor="Black"
+             >
+   
+    <StackLayout x:Name="stack2" Padding="20">
+        <Entry Keyboard="Numeric" 
+               x:Name="enumber" 
+               Placeholder="00" 
+               PlaceholderColor="White" 
+               TextColor="Azure"
+               FontSize="Large" HorizontalTextAlignment="Center"/>
+        <Button x:Name="btncalcular" Text="Calcular" TextColor="White" BackgroundColor="Blue" FontSize="Large"/>
+        <Label TextColor="White" Text="Fila 1" FontSize="Large"/>
+        <Label    BindingContext="{x:Reference progressBar1}"
+                            Text = "{Binding Progress, StringFormat='{0:P0}'}"
+                            HorizontalOptions ="Center"
+                            FontSize="20"
+                            FontFamily = "Helvetica Neue"
+                            TextColor ="Red" />
+        <ProgressBar x:Name="progressBar1"
+    IsVisible="true"
+      Progress="0.00"                  
+    WidthRequest="300"
+    HorizontalOptions="Center">
+        </ProgressBar>
+        <Label Text="Fila 2" TextColor="White" FontSize="Large"/>
+        <Label
+    BindingContext="{x:Reference progressBar2}"
+    Text = "{Binding Progress, StringFormat='{0:P0}'}"
+    HorizontalOptions ="Center"
+    FontSize="20"
+    FontFamily = "Helvetica Neue"
+    TextColor ="Red" />
+        <ProgressBar x:Name="progressBar2"
+    IsVisible="true"
+      Progress="0.00"                  
+    WidthRequest="300"
+    HorizontalOptions="Center">
+        </ProgressBar>
+        <Label Text="Fila 3" TextColor="White"
+               FontSize="Large"/>
+        <Label
+    BindingContext="{x:Reference progressBar3}"
+    Text = "{Binding Progress, StringFormat='{0:P0}'}"
+    HorizontalOptions ="Center"
+    FontSize="20"
+    FontFamily = "Helvetica Neue"
+    TextColor ="Red" />
+        <ProgressBar x:Name="progressBar3"
+    IsVisible="true"
+      Progress="0.00"                  
+    WidthRequest="300"
+    HorizontalOptions="Center">
+        </ProgressBar>
+    </StackLayout>
+</ContentPage>
